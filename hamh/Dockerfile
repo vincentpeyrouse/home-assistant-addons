@@ -11,6 +11,6 @@ LABEL \
   io.hass.version="$package_version" \
   io.hass.type="addon" \
   io.hass.arch="armhf|aarch64|i386|amd64"
-RUN npm install -g home-assistant-matter-hub@$package_version
+RUN npm install -g https://github.com/vincentpeyrouse/home-assistant-matter-hub
 
 CMD /docker-entrypoint.sh
