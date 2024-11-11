@@ -12,8 +12,8 @@ LABEL \
   io.hass.type="addon" \
   io.hass.arch="armhf|aarch64|i386|amd64"
 
-RUN apt-get -y update
-RUN apt-get -y install git
+RUN apk update
+RUN apk add git
 RUN npm install -g https://github.com/vincentpeyrouse/home-assistant-matter-hub
 
 CMD /docker-entrypoint.sh
