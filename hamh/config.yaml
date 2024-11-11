@@ -1,8 +1,8 @@
-version: "3.0.0-alpha.26"
+version: "3.0.0-alpha.26-vp"
 slug: hamh
 name: Home-Assistant-Matter-Hub
 description: Publish your entities from Home Assistant to any Matter-compatible controller like Alexa, Apple Home or Google Home.
-url: https://github.com/t0bst4r/home-assistant-matter-hub
+url: https://github.com/vincentpeyrouse/home-assistant-matter-hub
 homeassistant: 2024.1.0
 homeassistant_api: true
 host_network: true
