@@ -3,7 +3,13 @@ FROM ghcr.io/hassio-addons/base-nodejs:0.2.5
 ENV SUPERVISOR_TOKEN ""
 VOLUME /config
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN apk -U update && \
+    apk -U upgrade && \
+    apk -U add --no-cache \
+    nginx
+
+COPY rootfs/ /
+
 RUN chmod +x /docker-entrypoint.sh
 
 ARG package_version
@@ -12,8 +18,6 @@ LABEL \
   io.hass.type="addon" \
   io.hass.arch="armhf|aarch64|i386|amd64"
 
-RUN apk update
-RUN apk add git
-RUN npm install -g @vincentpeyrouse/home-assistant-matter-hub
+RUN npm install -g home-assistant-matter-hub
 
 CMD /docker-entrypoint.sh

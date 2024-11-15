@@ -11,7 +11,6 @@ homeassistant: 2024.1.0
 homeassistant_api: true
 host_network: true
 ingress: true
-ingress_port: 0
 init: false
 map:
   - addon_config:rw
@@ -19,6 +18,8 @@ options:
   app_log_level: info
   disable_log_colors: false
   mdns_network_interface: ""
+ports:
+  8482/tcp: null
 panel_icon: mdi:bridge
 panel_title: Matter bridges
 schema:
