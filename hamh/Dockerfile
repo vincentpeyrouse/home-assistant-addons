@@ -10,6 +10,7 @@ RUN apk -U update && \
 
 COPY rootfs/ /
 
+RUN chmod +x /etc/cont-init.d/30-nginx.sh
 RUN chmod +x /docker-entrypoint.sh
 
 ARG package_version
